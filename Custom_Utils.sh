@@ -27,9 +27,9 @@ fi
 echo
 sudo apt-get -y update >/dev/null && sudo apt-get -y upgrade >/dev/null
 if [ $? -eq 0 ]; then
-  echo "mise a jour reussie !"
+  echo "Mise a jour reussie !"
 else
-  echo -e "\033[31mmise a jour echouee !\033[0m"
+  echo -e "\033[31mMise a jour echouee !\033[0m"
 fi
 sleep 1
 
@@ -96,7 +96,7 @@ if curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions
 else 
     set_color red; echo "Installation de fisher echouee !"
 end
-    set_color normal; echo ""
+    set_color normal; echo 
 
 sleep 2
 
@@ -108,7 +108,7 @@ if fisher install IlanCosman/tide@v5
 else
     set_color red; echo "Installation du theme Tide echouee !"
 end
-    set_color normal; echo ""
+    set_color normal; echo 
 
 sleep 2
 
@@ -117,11 +117,11 @@ tide configure
 # Mise en place de Fish comme shell par defaut
 echo "Mise en place de Fish comme shell par defaut."
 if chsh -s /usr/bin/fish
-    echo "Mise en place de Fish comme shell par defaut a reussie !"
+    echo "La mise en place de Fish comme shell par defaut a reussie !"
 else
-    set_color red; echo "Mise en place de Fish comme shell par defaut a echouee !"
+    set_color red; echo "La mise en place de Fish comme shell par defaut a echouee !"
 end
-    set_color normal; echo ""
+    set_color normal; echo 
 sleep 2
 
 # Recapitulatif
@@ -134,10 +134,10 @@ chmod +x ./custom_fish.sh
 echo
 echo
 echo "Fish va maintenant se lancer, pour finir l'installation"
-echo "lance la commande suivante"
+echo "Lance la commande suivante"
 sleep 1
 echo
-echo "sudo ./custom_fish.sh"
+echo "./custom_fish.sh"
 sleep 3
 
 # Lancement de fish
