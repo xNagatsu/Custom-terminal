@@ -1,6 +1,8 @@
 #!/bin/bash
-# Il faut commencer par installer les 4 polices d'ecriture MesloLGS NF et les utiliser dans notre terminal (Tabby) 
-# https://github.com/IlanCosman/tide#fonts
+echo "Il faut commencer par installer les 4 polices d'ecriture MesloLGS NF et les utiliser dans notre terminal (Tabby)"
+echo "https://github.com/IlanCosman/tide#fonts"
+
+sleep 5
 
 # Verification des droits d'administration
 if [ "$EUID" -ne 0 ]
