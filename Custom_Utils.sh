@@ -1,11 +1,11 @@
 #!/bin/bash
 # Ce script installe les outils et les thèmes suivants :
-# - bat
-# - micro
-# - exa
-# - fish
-# - fisher
-# - tide
+# - bat          https://github.com/sharkdp/bat
+# - micro        https://github.com/zyedidia/micro
+# - exa          https://github.com/ogham/exa
+# - fish         https://github.com/fish-shell/fish-shell
+# - fisher       https://github.com/jorgebucaran/fisher
+# - tide         https://github.com/IlanCosman/tide
 
 echo "Installation du repository afin d'avoir la dernière version de fish"
 sleep 2
@@ -123,6 +123,30 @@ else
 end
     set_color normal; echo 
 sleep 2
+
+# Alias j'ai utiliser ceux de https://github.com/PAPAMICA/terminal/ car je les trouve explicite. (j'ai juste change bat pat batcat)
+
+echo "Creation des alias"
+
+### EXA
+
+alias ls="exa -a --icons"                   # short, multi-line
+alias ll="exa -1a --icons"                  # list, 1 per line
+alias ld="ll"                               # ^^^, NOTE: Trying to move to this for alternate hand commands
+alias la="exa -lagh --icons"                # list with info
+alias lt="exa -a --tree --icons --level=2"  # list with tree level 2
+alias ltf="exa -a --tree --icons"           # list with tree
+alias lat="exa -lagh --tree --icons"        # list with info and tree
+
+### BAT
+
+alias cat='batcat --style="header" --pager "less -RF"'
+alias catn='batcat --pager "less -RF"'
+alias batn='batcat --pager "less -RF"'
+
+### RACCOURCIS
+alias nano="micro" # Question d'habitudes ...
+
 
 # Recapitulatif
 echo "Installation terminee."
