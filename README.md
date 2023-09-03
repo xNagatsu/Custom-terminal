@@ -57,7 +57,7 @@ Etant pas un dev mais juste un passionné j'ai eu pas mal de difficultés que j'
 * [DeveloperLife](https://developerlife.com/2021/01/19/fish-scripting-manual/) Pour m'aider à comprendre la syntaxe de Fish.  
 * [Fishshell](https://fishshell.com/docs/current/index.html) le site officiel pour apréhender au mieux Fish.  
 * [AskUbuntu](https://askubuntu.com) Pour me documenter et comprendre mes problèmes.  
-* [StackOverflow](https://stackoverflow.com/questions)Pour me documenter et comprendre mes problèmes.  
+* [StackOverflow](https://stackoverflow.com/questions) Pour me documenter et comprendre mes problèmes.  
 * [Dev.to](https://dev.to/) Toujours pour mieux comprendre les soucis que j'ai rencontré.  
 * [Le Github de Fish](https://github.com/fish-shell/fish-shell/issues/) Pour voir et comprendre comment les gens on résolue ou non des problème similaire auxquels j'ai été confrontés.  
 * [ChatGPT](https://chat.openai.com) Pour vérifier mon script notament les petite erreur de syntaxe et pour voir si je pouvais compater mon code.  
