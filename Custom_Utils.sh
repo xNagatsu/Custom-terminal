@@ -5,7 +5,7 @@
 # - exa          https://github.com/ogham/exa
 # - fish         https://github.com/fish-shell/fish-shell
 # - fisher       https://github.com/jorgebucaran/fisher
-# - tide         .
+# - tide         https://github.com/IlanCosman/tide
 
   echo -e "\033[1;4;36mInstallation du repository afin d'avoir la dernière version de fish\033[0m"
 
@@ -17,7 +17,7 @@ sleep 2
 
   echo -e "\033[1;36mIl faut installer les 4 polices d'ecriture MesloLGS NF et les utiliser dans notre terminal (Tabby) pour avoir les logos & cie\033[0m"
 
-sleep 1.5
+sleep 1.
 
   echo -e "\033[1;36mhttps://github.com/IlanCosman/tide#fonts\033[0m"
 
