@@ -5,9 +5,9 @@
 # - exa          https://github.com/ogham/exa
 # - fish         https://github.com/fish-shell/fish-shell
 # - fisher       https://github.com/jorgebucaran/fisher
-# - tide         https://github.com/IlanCosman/tide
+# - tide         .
 
-  echo -e "\033[1;4;36Installation du repository afin d'avoir la dernière version de fish\033[0m"
+  echo -e "\033[1;4;36mInstallation du repository afin d'avoir la dernière version de fish\033[0m"
 
 sleep 2
 
