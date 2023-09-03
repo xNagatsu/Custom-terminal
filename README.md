@@ -1,6 +1,6 @@
 # 💡 Script pour personnaliser son Terminal
 
-## 🤔 Je viens de créer un script a lancer en post installation de VM de serveur Linux
+## 🤔 Je viens de créer un script à lancer en post installation de serveur Linux
 
 Alors pourquoi ne pas vous en faire profiter ?  
 Pour le moment je l'ai uniquement tester sur Ubuntu server mais cela devrais fonction sur la version Desktop d'Ubuntu ainsi que les version clients et serveurs de Debian.  
