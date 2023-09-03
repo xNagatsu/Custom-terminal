@@ -13,7 +13,6 @@ Cela m'a aprris à manipuler le bash et ce de façon pluôt utile je pense, ça 
 * [Bat](https://github.com/sharkdp/bat)  
 * [Micro](https://github.com/zyedidia/micro)  
 * [Exa](https://github.com/ogham/exa)  
-* [Intelligent standby list cleaner (ISLC)](https://www.wagnardsoft.com/content/Intelligent-standby-list-cleaner-ISLC-v1029-Released)  
 * [Fish](https://github.com/fish-shell/fish-shell)  
 * [Fisher](https://github.com/jorgebucaran/fisher)  
 * [Tide](https://github.com/IlanCosman/tide)  
