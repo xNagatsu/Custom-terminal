@@ -17,14 +17,8 @@ sleep 1.5
 echo "https://github.com/IlanCosman/tide#fonts"
 echo
 sleep 3
-
-# Verification des droits d'administration
-if [ "$EUID" -ne 0 ]
-  then echo "Ce script doit etre execute en tant qu'administrateur (avec sudo)." 
-  exit
-fi
-
 echo
+
 sudo apt-get -y update >/dev/null && sudo apt-get -y upgrade >/dev/null
 if [ $? -eq 0 ]; then
   echo "Mise a jour reussie !"
@@ -70,7 +64,7 @@ sleep 1
 # Installation de fish
 echo
 echo "Installation de fish."
-sudo apt-get -y install fish
+sudo apt-get -y install fish >/dev/null
 if [ $? -eq 0 ]; then
   echo "Installation de fish reussie !"
 else
@@ -115,14 +109,14 @@ sleep 2
 tide configure
 
 # Mise en place de Fish comme shell par defaut
-echo "Mise en place de Fish comme shell par defaut."
-if chsh -s /usr/bin/fish
-    echo "La mise en place de Fish comme shell par defaut a reussie !"
-else
-    set_color red; echo "La mise en place de Fish comme shell par defaut a echouee !"
-end
-    set_color normal; echo 
-sleep 2
+#echo "Mise en place de Fish comme shell par defaut."
+#if chsh -s /usr/bin/fish
+#    echo "La mise en place de Fish comme shell par defaut a reussie !"
+#else
+#    set_color red; echo "La mise en place de Fish comme shell par defaut a echouee !"
+#end
+#    set_color normal; echo 
+#sleep 2
 
 # Alias j'ai utiliser ceux de https://github.com/PAPAMICA/terminal/ car je les trouve explicite. (j'ai juste change bat pat batcat)
 
