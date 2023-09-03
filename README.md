@@ -5,6 +5,7 @@
 Alors pourquoi ne pas vous en faire profiter ?  
 Pour le moment je l'ai uniquement tester sur Ubuntu server mais cela devrais fonction sur la version Desktop d'Ubuntu ainsi que les version clients et serveurs de Debian.   
 Cela m'a aprris à manipuler le bash et ce de façon pluôt utile je pense, ça peut être bien d'avoir un preset pour chacune de ses machines.  
+
 ------------------
 
 ## 📦 Utilitaires installés par le script  
