@@ -91,10 +91,10 @@ cat << EOF > ./custom_fish.sh
 sleep 1
   if curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
     set_color cyan; echo "Installation de fisher reussie !"
-  else 
+  else
     set_color red; echo "Installation de fisher echouee !"
   end
-    set_color normal; echo 
+    set_color normal; echo
 
 sleep 2
 
@@ -102,12 +102,12 @@ sleep 2
     set_color cyan; echo "Installation du theme Tide......"
     set_color normal; echo
 sleep 1
-  if fisher install IlanCosman/tide@v5 
+  if fisher install IlanCosman/tide@v5
     set_color cyan; echo "Installation du theme Tide reussi !"
   else
     set_color red; echo "Installation du theme Tide echouee !"
   end
-    set_color normal; echo 
+    set_color normal; echo
 
 sleep 2
 
