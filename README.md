@@ -69,6 +69,6 @@ J'aurais pu le compacter d'avantage, notamment en compactant l'installation de t
 
 ## 👍 Recommandations
 
-- [Bibliothèque_de_commandes_Linux](https://linuxcommandlibrary.com/) Pour avoir un mémo des commandes linux sous la mains il existe une version sous Android ou iOS également.
-- [Micro_thèmes](https://github.com/zyedidia/micro/blob/master/runtime/help/colors.md) Pour changer le thème de micro personnement j'utlise dudekedark-tc.
-- [Tutoriaux](https://fishshell.com/docs/current/tutorial.html) Liste de tuto fait pas les dev de Fish
+- [Bibliothèque_de_commandes_Linux](https://linuxcommandlibrary.com/) Pour avoir un mémo des commandes linux sous la mains il existe une version sous Android ou iOS également.  
+- [Micro_thèmes](https://github.com/zyedidia/micro/blob/master/runtime/help/colors.md) Pour changer le thème de micro personnement j'utlise dudekedark-tc.  
+- [Tutoriaux](https://fishshell.com/docs/current/tutorial.html) Liste de tuto fait pas les dev de Fish.  

@@ -121,44 +121,44 @@ tide configure
 ################################# EXA #################################
 
   function ls --description=""                    # Alias de la commande
-    command exa -a --icons $argv                # ce que l'alias doit executer // command permet de rendre la fonction plus robuste car il garantit que "exa' est traité comme une commande externe
-                                                # "$argv" indique qu'on puisse utiliser des argument apres la commande 
+    command exa -a --icons \$argv                # ce que l'alias doit executer // command permet de rendre la fonction plus robuste car il garantit que "exa' est traité comme une commande externe
+                                                # "argv" indique qu'on puisse utiliser des argument apres la commande \`avant arg permet qu'il soit pris en compte comme caractere
   end                                             # Indique la fin de la fonction (alias)
   funcsave ls                                     # Va enregistre la fonction ls en créant le fichier ~/.config/fish/functions/ls.fish pour que l'alias soit dispo au redémarrage ce qui le rend permanent
 
 
   function ll --description="list un par ligne"
-    command exa -1a --icons $argv
+    command exa -1a --icons \$argv
   end
   funcsave ll
 
 
   function ld --description="Comme ll"
-    command ll $argv
+    command ll \$argv
   end
   funcsave ld
 
 
   function la --description="Liste avec info"
-    command exa -lagh --icons $argv
+    command exa -lagh --icons \$argv
   end
   funcsave la
 
 
   function lt --description="liste en arborescence level 2"
-    command exa -a --tree --icons --level=2 $argv
+    command exa -a --tree --icons --level=2 \$argv
   end
   funcsave lt
 
 
   function ltf --description="Liste en arborescence"
-    command exa -a --tree --icons $argv
+    command exa -a --tree --icons \$argv
   end
   funcsave ltf
 
 
   function lat --description="liste en arborescence avec info"
-    command exa -lagh --tree --icons $argv
+    command exa -lagh --tree --icons \$argv
   end
   funcsave lat
 
@@ -166,43 +166,43 @@ tide configure
 ################################# BAT #################################
 
   function cat --description=""
-    command batcat --style="header" --pager "less -RF" $argv
+    command batcat --style="header" --pager "less -RF" \$argv
   end
   funcsave cat
 
 
   function catn --description=""
-    command batcat --pager "less -RF" $argv
+    command batcat --pager "less -RF" \$argv
   end
   funcsave catn
 
 
   function batn --description=""
-    command batcat --pager "less -RF" $argv
+    command batcat --pager "less -RF" \$argv
   end
   funcsave batn
 
 ################################# RACCOURCIS #################################
 
   function nano --description="Remplace nano par micro"
-    command micro $argv
+    command micro \$argv
   end
   funcsave nano
 
 
   function ipa --description="ip -c a"
-    command ip -c a $argv
+    command ip -c a \$argv
   end
   funcsave ipa
 
 
   function ipr --description="ip -c route"
-    command ip -c route $argv
+    command ip -c route \$argv
   end
   funcsave ipr
 
   function ipn --description="ip -c neigh"
-    command ip -c neigh $argv
+    command ip -c neigh \$argv
   end
   funcsave ipn
 
