@@ -3,7 +3,7 @@
 ## 🤔 Je viens de créer un script à lancer en post installation de serveur Linux
 
 Alors pourquoi ne pas vous en faire profiter ?  
-Pour le moment je l'ai uniquement tester sur Ubuntu server mais cela devrais fonction sur la version Desktop d'Ubuntu ainsi que les version clients et serveurs de Debian.   
+Pour le moment je l'ai uniquement tester sur Ubuntu server mais cela devrais fonction sur la version Desktop d'Ubuntu ainsi que les version clients et serveurs de Debian.
 Cela m'a aprris à manipuler le bash et ce de façon pluôt utile je pense, ça peut être bien d'avoir un preset pour chacune de ses machines.  
 
 ------------------
@@ -19,30 +19,37 @@ Cela m'a aprris à manipuler le bash et ce de façon pluôt utile je pense, ça 
 
 ------------------
 
-## ⚙️ Installation et présentation du script 
+## ⚙️ Installation et présentation du script  
 
 Avant toute chose, mettez vous dans votre répertoire avant de vous lancer dans l'installation du script.  
 Faite simplement cd dans votre terminal.  
 Lancer le script en copiant une des deux commandes si vous avez curl passez par **curl** sinon passez par **wget**.  
-**Avec curl**  
+
+### Avec curl
+
+``` bash
+curl -sLO "https://raw.githubusercontent.com/xNagatsu/Custom-terminal/main/Custom_Utils.sh" && chmod +x Custom_Utils.sh && ./Custom_Utils.sh  
 ```
-Commande a venir car le telechargement modifie mon script  
+
+### Avec wget
+
+``` bash
+wget -q "https://raw.githubusercontent.com/xNagatsu/Custom-terminal/main/Custom_Utils.sh" && chmod +x Custom_Utils.sh && ./Custom_Utils.sh   
 ```
-**Avec wget**  
-```
-Commande a venir cale telechargement modifie mon script  
-```
+
 Dans un premier temps le script ajoute le repository afin d'avoir la derniere version de fish.  
-Ensuite il met a jours notre machine puis passe à l'instalaltion de utilitaite sité plus haut.    
+Ensuite il met a jours notre machine puis passe à l'instalaltion de utilitaite sité plus haut.  
 
 Dans un deuxième temps ce cript en créer un autre afin de lancer l'autre script via fish car il utilise un autre bash pour installer les pluins et themes.  
 Deplus cela permet de pouvoir configurer les preset de notre fish car j'ai lancer la commande pour ça configuration intiale.  
 Pas de panique la commande à tapé et super simple et elle sera indiqué dans votre terminal.  
 La voici si besoin.
-```
+
+``` bash
 ./custom_fish.sh  
 ```
-Une fois la configuration de Fish fini le script créer des fonctions qui servent d'alias au commandes notamment pour exa et micro.   
+
+Une fois la configuration de Fish fini le script créer des fonctions qui servent d'alias au commandes notamment pour exa et micro.  
 C'est fini !   ✌️(•‿•)  
 
 ## 📄 Inspirration  et Documentations  
@@ -69,6 +76,6 @@ J'aurais pu le compacter d'avantage, notamment en compactant l'installation de t
 
 ## 👍 Recommandations
 
-- [Bibliothèque_de_commandes_Linux](https://linuxcommandlibrary.com/) Pour avoir un mémo des commandes linux sous la mains il existe une version sous Android ou iOS également.  
-- [Micro_thèmes](https://github.com/zyedidia/micro/blob/master/runtime/help/colors.md) Pour changer le thème de micro personnement j'utlise dudekedark-tc.  
-- [Tutoriaux](https://fishshell.com/docs/current/tutorial.html) Liste de tuto fait pas les dev de Fish.  
+* [Bibliothèque_de_commandes_Linux](https://linuxcommandlibrary.com/) Pour avoir un mémo des commandes linux sous la mains il existe une version sous Android ou iOS également.  
+* [Micro_thèmes](https://github.com/zyedidia/micro/blob/master/runtime/help/colors.md) Pour changer le thème de micro personnement j'utlise dudekedark-tc.  
+* [Tutoriaux](https://fishshell.com/docs/current/tutorial.html) Liste de tuto fait pas les dev de Fish.  
