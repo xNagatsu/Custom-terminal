@@ -7,80 +7,54 @@
 # - fisher       https://github.com/jorgebucaran/fisher
 # - tide         https://github.com/IlanCosman/tide
 
-  echo -e "\033[1;4;36mInstallation du repository afin d'avoir la dernière version de fish\033[0m"
+# Couleurs pour les messages
+cyan="\033[1;36m"
+red="\033[1;31m"
+reset="\033[0m"
 
+# Fonction pour afficher un message de succès ou d'échec
+function check_result {
+  if [ $? -eq 0 ]; then
+    echo -e "${cyan}$1 réussie !${reset}"
+  else
+    echo -e "${red}$1 échouée !${reset}"
+  fi
+}
+
+# Liste des paquets à installer
+packages=("bat" "micro" "exa" "fish")
+
+# Ajout du repository Fish
+  echo -e "${cyan}Installation du repository afin d'avoir la dernière version de Fish${reset}"
 sleep 2
-
   sudo add-apt-repository ppa:fish-shell/release-3
-
   echo -e "\n\n\n\n"
 
-  echo -e "\033[1;36mIl faut installer les 4 polices d'ecriture MesloLGS NF et les utiliser dans notre terminal (Tabby) pour avoir les logos & cie\033[0m"
-
-sleep 1.
-
-  echo -e "\033[1;36mhttps://github.com/IlanCosman/tide#fonts\033[0m"
-
+# Precison pour meilleur rendu du terminal
+  echo -e "${cyan}$1 Il faut installer les 4 polices d'ecriture MesloLGS NF et les utiliser dans notre terminal (Tabby) pour avoir les logos & cie${reset}"
+sleep 1
+  echo -e "${cyan}$1 https://github.com/IlanCosman/tide#fonts${reset}"
   echo -e "\n\n\n\n"
-
 sleep 3
 
-sudo apt-get -y update >/dev/null && sudo apt-get -y upgrade >/dev/null
-  if [ $? -eq 0 ]; then
-    echo -e "\033[1;36mMise a jour reussie !\033[0m"
-  else
-    echo -e "\033[1;31mMise a jour echouee !\033[0m"
-  fi
+# Mise à jour du système 
+  echo -e "${cyan}Mise à jour du système...${reset}"
+  sudo apt-get -y update >/dev/null && sudo apt-get -y upgrade >/dev/null
+  check_result "Mise à jour"
 echo
 sleep 1
 
-# Installation de bat
-  echo -e "\033[1;4;36mInstallation de bat......\033[0m"
-  sudo apt-get -y install bat >/dev/null
-    if [ $? -eq 0 ]; then
-      echo -e "\033[1;36mInstallation de bat reussie !\033[0m"
-    else
-      echo -e "\033[1;31mInstallation de bat echouee !\033[0m"
-    fi
-echo
-sleep 1
-
-# Installation de micro
-  echo -e "\033[1;4;36mInstallation de micro......\033[0m"
-  sudo apt-get -y install micro >/dev/null
-    if [ $? -eq 0 ]; then
-      echo -e "\033[1;36mInstallation de micro reussie !\033[0m"
-    else
-      echo -e "\033[1;31mInstallation de micro echouee !\033[0m"
-    fi
-echo
-sleep 1
-
-# Installation de exa
-  echo -e "\033[1;4;36mInstallation de exa......\033[0m"
-  sudo apt-get -y install exa >/dev/null
-    if [ $? -eq 0 ]; then
-      echo -e "\033[1;36mInstallation de exa reussie !\033[0m"
-    else
-      echo -e "\033[1;31mInstallation de exa echouee !\033[0m"
-    fi
-echo
-sleep 1
-
-# Installation de fish
-  echo -e "\033[1;4;36mInstallation de fish......\033[0m"
-  sudo apt-get -y install fish >/dev/null
-    if [ $? -eq 0 ]; then
-      echo -e "\033[1;36mInstallation de fish reussie !\033[0m"
-    else
-      echo -e "\033[1;31mInstallation de fish echouee !\033[0m"
-    fi
-
-echo -e "\n\n\n\n"
-sleep 2
+# Installation des paquets
+for package in "${packages[@]}"; do
+  echo -e "${cyan}Installation de $package...${reset}"
+  sudo apt-get -y install "$package" >/dev/null
+  check_result "Installation de $package"
+  echo -e "\n\n"
+  sleep 1
+done
 
 # Generation du fichier custom_fish.sh
-  echo -e "\033[1;36mGeneration du fichier custom_fish.sh......\033[0m"
+  echo -e "${cyan}Generation du fichier custom_fish.sh......${reset}"
 sleep 2
 
 cat << EOF > ./custom_fish.sh
@@ -121,11 +95,10 @@ tide configure
 ################################# EXA #################################
 
   function ls --description=""                    # Alias de la commande
-    command exa -a --icons \$argv                # ce que l'alias doit executer // command permet de rendre la fonction plus robuste car il garantit que "exa' est traité comme une commande externe
-                                                # "argv" indique qu'on puisse utiliser des argument apres la commande \`avant arg permet qu'il soit pris en compte comme caractere
+    command exa -a --icons \$argv                 # ce que l'alias doit executer // command permet de rendre la fonction plus robuste car il garantit que "exa' est traité comme une commande externe
+                                                  # "argv" indique qu'on puisse utiliser des argument apres la commande \`avant arg permet qu'il soit pris en compte comme caractere
   end                                             # Indique la fin de la fonction (alias)
   funcsave ls                                     # Va enregistre la fonction ls en créant le fichier ~/.config/fish/functions/ls.fish pour que l'alias soit dispo au redémarrage ce qui le rend permanent
-
 
   function ll --description="list un par ligne"
     command exa -1a --icons \$argv
@@ -217,18 +190,18 @@ sleep 1
 
  echo -e "\n\n\n\n"
 
-  echo -e "\033[1;36mFish va maintenant se lancer, pour finir l'installation"
-  echo -e "\033[1;36mLance la commande suivante"
+  echo -e "${cyan}Fish va maintenant se lancer, pour finir l'installation${reset}"
+  echo -e "${cyan}Lance la commande suivante${reset}"
 
 echo -e "\n\n\n\n"
 
 sleep 1
 
-  echo -e "\033[1;32m./custom_fish.sh\033[0m"
+  echo -e "${cyan}./custom_fish.sh${reset}"
 
 echo -e "\n\n\n\n"
 sleep 3
 
 # Lancement de fish
-  echo -e "\033[1;36mLancement de fish.\033[0m"
+  echo -e "${cyan}Lancement de fish.${reset}"
   sudo -u $(basename $(pwd)) fish
